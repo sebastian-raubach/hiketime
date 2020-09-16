@@ -21,7 +21,7 @@ export default new Vuex.Store({
       state.kmPerHour = newKmPerHour
     },
     ON_M_PER_HOUR_CHANGED_MUTATION: function (state, newMPerHour) {
-      state.MPerHour = newMPerHour
+      state.mPerHour = newMPerHour
     },
     ON_HIKES_CHANGED_MUTATION: function (state, newHikes) {
       state.hikes = newHikes
