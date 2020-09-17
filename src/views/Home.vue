@@ -15,12 +15,12 @@
 
     <h2 class="mt-3">Parameters</h2>
     <b-row>
-      <b-col>
+      <b-col cols="12" sm="6">
         <b-form-group label="Flat walking speed [km/h]" label-for="kmPerHour">
           <b-input :value="kmPerHour" @input="updateKmPerHour" id="kmPerHour" type="number" min="0" step="any" />
         </b-form-group>
       </b-col>
-      <b-col>
+      <b-col cols="12" sm="6">
         <b-form-group label="Climbing speed [m/h]" label-for="mPerHour">
           <b-input :value="mPerHour" @input="updateMPerHour" id="mPerHour" type="number" min="0" step="any" />
         </b-form-group>
@@ -30,14 +30,19 @@
     <h2 class="mt-3">Add route</h2>
     <b-form @submit.prevent="addHike">
       <b-row>
-        <b-col>
+        <b-col cols="12" sm="4">
           <b-form-group label="Distance [km]" label-for="distance">
-            <b-input v-model="distance" id="distance" type="number" min="0" step="any" />
+            <b-input v-model="distance" id="distance" type="number" min="0" step="any" ref="distance" />
           </b-form-group>
         </b-col>
-        <b-col>
+        <b-col cols="12" sm="4">
           <b-form-group label="Total ascent [m]" label-for="ascent">
             <b-input v-model="ascent" id="ascent" type="number" min="0" step="any" />
+          </b-form-group>
+        </b-col>
+        <b-col cols="12" sm="4">
+          <b-form-group label="Name (optional)" label-for="distance">
+            <b-input v-model="name" id="name" />
           </b-form-group>
         </b-col>
       </b-row>
@@ -61,6 +66,7 @@ import HikeTable from '@/components/table/HikeTable'
 export default {
   data: function () {
     return {
+      name: null,
       distance: null,
       ascent: null
     }
@@ -80,14 +86,18 @@ export default {
     addHike: function () {
       if (this.distance !== null && this.ascent !== null) {
         const hike = {
+          name: this.name,
           distance: this.distance,
           ascent: this.ascent
         }
 
         this.$store.dispatch('addHike', hike)
 
+        this.name = null
         this.distance = null
         this.ascent = null
+
+        this.$refs.distance.focus()
       }
     },
     deleteHike: function (data) {

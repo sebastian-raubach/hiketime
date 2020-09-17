@@ -3,7 +3,7 @@
     <b-navbar toggleable="lg" variant="primary" type="dark">
       <b-navbar-brand href="#">HikeTime</b-navbar-brand>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle> -->
     </b-navbar>
     <b-container id="app">
       <router-view :key="$route.path" class="my-3" />

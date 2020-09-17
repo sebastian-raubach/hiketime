@@ -13,7 +13,7 @@
       {{ getTime(data.item) }}
     </template>
     <template v-slot:cell(delete)="data">
-      <b-button variant="outline-danger" size="sm" @click="$store.dispatch('removeHike', data.index)">🗑️</b-button>
+      <b-button variant="outline-danger" size="sm" @click="$store.dispatch('removeHike', data.index)">Delete</b-button>
     </template>
   </b-table>
 </template>
@@ -32,7 +32,7 @@ export default {
   },
   data: function () {
     return {
-      columns: ['distance', 'ascent', 'time', {
+      columns: ['name', 'distance', 'ascent', 'time', {
         key: 'delete',
         label: '',
         class: 'text-right'
