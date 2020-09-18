@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.23cdecc92cbfda9e036d17c2217d1c67.js"
+  "precache-manifest.68fbd6958a4ed75db60dfd0e72ba3311.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "hiketime"});

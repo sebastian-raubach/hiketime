@@ -36,7 +36,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "hiketime.svg"
   },
   {
-    "revision": "2b3bcc80315acc9348bd89f18ab52288",
+    "revision": "6029a658190b177bc466b67113cb9656",
     "url": "index.html"
   },
   {
