@@ -80,7 +80,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "safari-pinned-tab.svg"
   },
   {
-    "revision": "72ac1daa9e465debf46d724a743a1c18",
+    "revision": "f682a1f74e21412f27c3e6c6f0670a17",
     "url": "site.webmanifest"
   }
 ]);
