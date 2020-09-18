@@ -4,6 +4,8 @@ import store from './store'
 import router from './router'
 import mixin from './mixins'
 
+import './registerServiceWorker'
+
 import { BootstrapVue } from 'bootstrap-vue'
 
 Vue.mixin(mixin)
