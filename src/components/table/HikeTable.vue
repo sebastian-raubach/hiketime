@@ -1,6 +1,7 @@
 <template>
   <b-table striped
            hover
+           responsive
            :items="hikes"
            :fields="columns">
     <template v-slot:cell(distance)="data">
